@@ -1,0 +1,258 @@
+@charset "utf-8";
+@import url(icon-fonts.css);
+
+.hm_custom_image {
+    border: 1px solid #ddd;
+    display: block;
+    margin: 11px 0;
+    max-width: 263px;
+    padding: 5px;
+}
+.hm_ad_header {
+    background: #1ccdca;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    margin-top: 25px;
+    padding: 9px 12px;
+    position: relative;
+    text-transform: uppercase;
+}
+.admin-color-fresh .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a, .wp-customizer .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+    background: #101315;
+    text-shadow: 0 0 transparent;
+}
+select.arrow{
+	position:relative;
+	margin:0;
+	padding:0;
+	top:0;
+	bottom:0;	
+}
+.search_in_icons {
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    height: 34px;
+    margin-left: 30%;
+    margin-top: 14px;
+    padding: 0 10px;
+    width: 40%;
+}
+.close_box_icon {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+	display: none;
+}
+.icons_container{
+	display: none;
+	background: #fff;
+    bottom: 10px;
+    left: 50%;
+    position: fixed;
+    top: 45px;
+    transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+    width: 900px;
+    z-index: 1000000;
+}
+.icons_container .icons_block h1{
+	border-bottom: 1px solid #ddd;
+    margin: 0;
+    padding: 15px 0 15px 15px;
+}
+.icons_container .get_icons_from_ajax{
+	padding: 15px;
+}
+.icons_container .select_icon_save{
+	
+}
+#all_idealtheme_icons{
+	height: 370px;
+    overflow: auto;
+}
+.idealtheme_font_icon_list{
+	margin: 0;
+    padding: 0;
+}
+.idealtheme_font_icon_list li{
+	border: 1px solid #ccc;
+    display: inline-block;
+    font-size: 32px;
+    height: 53px;
+    line-height: 53px;
+    margin: 0 10px 10px 0;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 53px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.idealtheme_font_icon_list li.active_li{
+    background: #F86923;
+    border-color: #F86923;
+    color: #fff;	
+}
+.choose_icon_for_menu {
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-ms-border-radius: 3px;
+    border: 1px solid #aaa;
+    color: #888;
+    display: inline-block;
+    font-size: 11px;
+    font-style: normal;
+    line-height: 30px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.idealtheme_one_page_select, .idealtheme_menu_type_select, .idealtheme_sub_menu_type_select {
+    width: 100%;
+}
+.idealtheme_choose_icon_menu {
+    display:none;
+}
+.icon_end_block{
+	border-top: 1px solid #ddd;
+    padding: 15px;
+}
+.idealtheme_choose_icon .hide {
+    display: none;
+}
+.choose_icon {
+    display: inline-block;
+    vertical-align: top;
+}
+.idealtheme_choose_icon i[class^="ico-"], .idealtheme_choose_icon i[class*=" ico-"]{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+    display: inline-block;
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
+    margin-left: 8px;
+    text-align: center;
+    width: 35px;
+}
+.chooser_icon_con > i[class^="ico-"], .chooser_icon_con > i[class*=" ico-"]{
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-size: 32px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 8px;
+    text-align: center;
+    vertical-align: top;
+    width: 68px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+i#menu_icon{
+	position: relative;
+	cursor: auto;
+}
+i#menu_icon i{
+	display:none;
+}
+.chooser_icon_con > i[class^="ico-"] i, .chooser_icon_con > i[class*=" ico-"] i{
+	display:block !important;
+}
+i#remove_menu {
+    background: #f86923;
+    border-radius: 0 2px;
+	-moz-border-radius: 0 2px;
+	-webkit-border-radius: 0 2px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    position: absolute;
+    right: -1px;
+    text-align: center;
+    top: -1px;
+    width: 18px;
+}
+.idealtheme_font_icon_list li input{
+	height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+.redux-container-image_select .redux-image-select {
+    max-width: 100%;
+}
+.redux-container-image_select ul.redux-image-select li:not(:last-child) {
+    padding-right: 12px;
+}
+.redux-main .form-table::after {
+    background: #fff;
+    bottom: 0;
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100%;
+}
+.redux-main .form-table {
+    position: relative;
+}
+.redux-notice-field.redux-success p {
+    letter-spacing: 1px;
+}
+.updated.redux-notice, #redux_dashboard_widget {
+    display: none;
+}
+.redux-notice-field.redux-success {
+    background: #0C8D94;
+    border-color: #0C8D94;
+    border-radius: 3px;-webkit-border-radius: 3px; -o-border-radius: 3px;
+    box-shadow: none;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.redux-group-tab > h2 {
+    color: #0c8d94;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.redux-notice-field.redux-success p b{
+	font-size: 15px;
+	text-transform: uppercase;	
+}
+.admin-color-fresh #redux-header, .wp-customizer #redux-header {
+    border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0;
+}
+.redux-main .field-desc.description {
+    color: #888;
+}
+.redux-container .redux-group-tab h3 {
+    color: #e64c3c;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#theme_color_mode_2:not(:checked) + img {
+    border-color: #191919;
+}
+.redux-container-image_select .redux-image-select img, .redux-container-image_select .redux-image-select-selected img, .redux-container-image_select .redux-image-select .tiles, .redux-container-image_select .redux-image-select-selected .tiles {
+    border-radius: 2px; -webkit-border-radius: 2px; -moz-border-radius: 2px;
+}

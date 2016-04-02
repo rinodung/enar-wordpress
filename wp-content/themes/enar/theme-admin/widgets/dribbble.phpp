@@ -1,0 +1,110 @@
+<?php
+class RM_Dribbble extends WP_Widget {
+ 
+    function RM_Dribbble() {     
+        $widget_ops = array( 'classname' => 'RM_Dribbble', 'description' => esc_html__( 'Widget display Dribbble feed','enar'));
+        parent::__construct( 'RM_Dribbble', esc_html__( 'Enar - Dribbble','enar'), $widget_ops);
+    }
+ 
+    function form($instance) {
+		$instance = wp_parse_args( (array) $instance, array(
+			'title' => 'Dribbble', 
+			'dribbble_id' => 'Glennz', 
+			'number' => '9',
+			'show' => 'light-box',
+		));
+		
+		$title       = esc_attr($instance['title']);
+		$dribbble_id = esc_attr($instance['dribbble_id']);
+		$number      = absint($instance['number']);
+		$show        = esc_attr($instance['show']);
+		
+		?>
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php esc_html_e( 'Title :', 'enar') ?></label>
+                    <input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+            </p> 
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('dribbble_id')); ?>"><?php esc_html_e( 'Dribbble username or ID :', 'enar') ?></label>
+                    <input class="widefat" id="<?php echo esc_attr($this->get_field_id('dribbble_id')); ?>" name="<?php echo esc_attr($this->get_field_name('dribbble_id')); ?>" type="text" value="<?php echo esc_attr($dribbble_id); ?>" />
+ 
+            </p> 
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id('number')); ?>"><?php esc_html_e( 'Number of Photos:', 'enar') ?></label>
+                    <input class="widefat" id="<?php echo esc_attr($this->get_field_id('number')); ?>" name="<?php echo esc_attr($this->get_field_name('number')); ?>" type="text" value="<?php echo esc_attr($number); ?>" />
+            </p> 
+            <p>
+                <label for="<?php echo esc_attr($this->get_field_id( 'show' )); ?>"><?php esc_html_e( 'Type : Light Box or Normal', 'enar') ?></label>
+                <select id="<?php echo esc_attr($this->get_field_id( 'show' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'show' )); ?>" class="widefat">
+                    <option <?php if ( 'light-box' == $instance['show'] ) echo 'selected="selected"'; ?>>light-box</option>
+                    <option <?php if ( 'normal' == $instance['show'] ) echo 'selected="selected"'; ?>>normal</option>
+                </select>
+            </p>
+            
+    	<?php
+    }
+ 
+    function update($new_instance, $old_instance) {
+		$instance=$old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['dribbble_id']= strip_tags($new_instance['dribbble_id']);
+		$instance['number']= $new_instance['number'];
+		$instance['show'] = $new_instance['show'];
+		return $instance;
+    }
+ 
+    function widget($args, $instance) {
+		extract($args);
+		$title = apply_filters('widget_title', $instance['title']);
+		if ( empty($title) ) $title = false;
+		$dribbble_id = $instance['dribbble_id'];
+		$number = $instance['number'];
+		$show = $instance['show'];
+		$rndn = rand(1,100);
+		
+		echo $before_widget;
+
+		if ( $title )
+		echo $before_title . $title . $after_title;
+		
+		$show_light_box = ($show == 'light-box') ? 'shot_link = shot.image_url;' : '';
+		
+		wp_enqueue_script('idealtheme_jribbble_js', get_template_directory_uri() . '/js/jribbble.js', 'jquery', '1.0', true);
+
+		?>
+			<script type="text/javascript">
+				  jQuery(document).ready(function($) {
+						$.jribbble.getShotsByPlayerId('<?php echo esc_js($dribbble_id); ?>', function (playerShots) {
+							var html = [];
+								$.each(playerShots.shots, function (i, shot) {
+								var shot_link = shot.url;
+								var rndn = '<?php echo esc_js($rndn); ?>';
+								<?php echo esc_js($show_light_box); ?>
+								html.push('<div class="dribbble-widget-item">');
+								html.push('<a rel="prettyphoto[dri-'+rndn+']" target="_blank" href="' + shot_link + '">');
+								html.push('<img src="' + shot.image_teaser_url + '" ');
+								html.push('alt="' + shot.title + '"></a></div>');
+							});
+						
+							$('#dri-w-<?php echo esc_js($rndn); ?>').html(html.join(''));
+							<?php if($show == 'light-box') { ?>
+							$(".dribbble-widget-item a").prettyPhoto({animation_speed:'fast',slideshow:10000, deeplinking: false});
+							<?php } ?>
+					
+						}, {page: 1, per_page: <?php echo esc_js($number); ?>});
+				  });
+			</script><?php
+        
+        ?><div class="dribbble-widget-wrap clearfix" id="dri-w-<?php echo esc_attr($rndn); ?>"></div><?php      
+		
+		echo $after_widget;		
+    }
+ 
+}
+ 
+ 
+add_action( 'widgets_init', 'idealtheme_dribbble_widget' );
+function idealtheme_dribbble_widget() {
+    register_widget('RM_Dribbble');
+}
+?>

@@ -1,0 +1,87 @@
+.rwmb-checkbox-wrapper .description {
+	display: inline;
+	font-style: normal;
+}
+.ch_switch {
+  width: 80px;
+  height: 30px;
+  position: relative;
+  margin: 0px 0 10px 0;
+}
+.ch_switch input {
+    bottom: 0;
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.ch_switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ch_switch label i {
+    display: block;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.ch_switch label i:after {
+    background: #FBFBFB;
+    border-color: #D8D8D8;
+	border-style: solid;
+    border-width: 1px 1px 1px 0px;
+    border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	-webkit-border-radius: 0 3px 3px 0;
+    color: #444;
+    content: "on";
+    font-size: 11px;
+    font-style: normal;
+    height: 32px;
+    line-height: 32px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 50%;
+}
+.ch_switch input:checked ~ label i:after {
+    background: #00AFB2;
+    border-color: #00AFB2;
+	color: #fff;
+}
+.ch_switch input:checked ~ label i:before {
+  	background: #FBFBFB;
+    border-color: #D8D8D8;
+	color: #444;
+}
+.ch_switch label i:before {
+    background: #ED3B3B;
+    border-color: #ED3B3B;
+    border-radius: 3px 0 0 3px;
+	-webkit-border-radius: 3px 0 0 3px;
+	-moz-border-radius: 3px 0 0 3px;
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    color: #fff;
+    content: "off";
+    font-size: 11px;
+    font-style: normal;
+    height: 32px;
+    left: -1px;
+    line-height: 32px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50%;
+    z-index: 10;
+}

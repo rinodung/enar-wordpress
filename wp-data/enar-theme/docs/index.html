@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Enar - Responsive Multi-Purpose WordPress Theme ( Documentation )</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic,100italic,100' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+<body role="document" data-target=".navbar-fixed-top" data-spy="scroll">
+    
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="">
+            <div class="navbar-header">
+                <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a href="#" class="navbar-brand logo_con"><img src="img/logo-light.png" alt="" /></a> -->
+            </div>
+            <div class="navbar-collapse collapse navbar-ex1-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#documentation" class="page-scroll">Documentation</a></li>
+                    <!--<li><a href="http://www.enar.ideal-theme.com/wordpress/" target="_blank" class="page-scroll">Demo</a></li>-->
+                    
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Installation <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">Install Theme</li>
+                            <li><a href="#installation_ftp" class="page-scroll">Uploading via FTP</a></li>
+                            <li><a href="#installation_dash" class="page-scroll">Uploading Using WordPress Dashboard</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li class="dropdown-header">Install Updates</li>
+                            <li><a href="#enar_updating" class="page-scroll">Updating Automatically</a></li>
+                            <li><a href="#enar_updating_manually" class="page-scroll">Updating Manually</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li class="dropdown-header">Install Sample Content</li>
+                            <li><a href="#installing_sample_content" class="page-scroll">Installing Sample Content</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Translations <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#language_translations" class="page-scroll">Translating The Theme</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Menus <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#theme_navigations" class="page-scroll">Theme Menus</a></li>
+                            <li><a href="#mega_menus" class="page-scroll">Mega Menu</a></li>
+                            <li><a href="#slider_menus" class="page-scroll">Slider Menu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#enar_sliders" class="page-scroll">Sliders</a></li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Shortcodes <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#shortcodes_section" class="page-scroll">Section</a></li>
+                            <li><a href="#shortcodes_rows" class="page-scroll">Rows & Columns</a></li>
+                            <li><a href="#shortcodes_video" class="page-scroll">Video</a></li>
+                            <li><a href="#shortcodes_title" class="page-scroll">Title</a></li>
+                            <li><a href="#shortcodes_description" class="page-scroll">Description</a></li>
+                            <li><a href="#shortcodes_banner" class="page-scroll">Banner Text</a></li>
+                            <li><a href="#shortcodes_accordion" class="page-scroll">Accordion</a></li>
+                            <li><a href="#shortcodes_tabs" class="page-scroll">Tabs</a></li>
+                            <li><a href="#shortcodes_clients" class="page-scroll">Clients</a></li>
+                            <li><a href="#shortcodes_counters" class="page-scroll">Counters</a></li>
+                            <li><a href="#shortcodes_light_box" class="page-scroll">Light Box</a></li>
+                            <li><a href="#shortcodes_skills" class="page-scroll">Skills</a></li>
+                            <li><a href="#shortcodes_team" class="page-scroll">Team</a></li>
+                            <li><a href="#shortcodes_testimonials" class="page-scroll">Testimonials</a></li>
+                            <li class="divider" role="separator"></li>
+                            <li class="dropdown-header">More Coming Soon...</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Options <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#options_post_meta" class="page-scroll">Post & Pages Options</a></li>
+                            <li><a href="#options_theme" class="page-scroll">Theme Options</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Pages <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#pages_contact" class="page-scroll">Contact Page</a></li>
+                            <li><a href="#pages_faq" class="page-scroll">FAQ Page</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Blog <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#blog_new_post" class="page-scroll">Add New Blog Post</a></li>
+                            <li><a href="#blog_widget" class="page-scroll">Blog Post Sidebar Widgets</a></li>
+                            <li><a href="#blog_post_features" class="page-scroll">Blog Post Features</a></li>
+                            <li><a href="#blog_post_author" class="page-scroll">Blog Post About Author Box</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    
+    <div id="documentation" class="enar_header">
+        <div class="container">
+            <h1><b>Enar</b> - Responsive Multi-Purpose WordPress Theme</h1>
+            <p>A Beautiful, Professional and Ultimate Wordpress Theme.</p>
+        </div>
+    </div>
+    
+    <!---------------------------->
+    <div class="container enar_content">
+        
+        <div class="row">
+            <!--Nav Bar -->
+            <!-- <div class="col-md-4">
+                <nav>
+                    <div class="bs-docs-sidebar">
+                        <ul id="sidebar" class="nav nav-stacked fixed enar_side_sidebar">
+                            <li>
+                                <a href="icons/icons.html" target="_blank" class="page-scroll">Icons</a>
+                            </li>
+                            <li>
+                                <a href="#enar_options" class="page-scroll">Theme Options</a>
+                            </li>
+                            <li>
+                                <a href="#enar_footer" class="page-scroll">Footer</a>
+                            </li>
+                            <li>
+                                <a href="#enar_meta_boxes" class="page-scroll">Meta Boxes</a>
+                            </li>
+                            <li>
+                                <a href="#enar_pages" class="page-scroll">Pages</a>
+                            </li>
+                            <li>
+                                <a href="#installation" class="page-scroll">Installation</a>
+                                <ul class="nav nav-stacked">
+                                    <li><a href="#installation_ftp" class="page-scroll">Uploading via FTP</a></li>
+                                    <li><a href="#installation_dash" class="page-scroll">Using WordPress Dashboard</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#updating" class="page-scroll">Updating Enar Theme</a>
+                            </li>
+                            <li>
+                                <a href="#installing_sample_content" class="page-scroll">Installing Sample Content</a>
+                            </li>
+                            <li>
+                                <a href="#language_translations" class="page-scroll">Language Translations</a>
+                            </li>
+                            <li>
+                                <a href="#theme_navigations" class="page-scroll">Theme Menus</a>
+                                <ul class="nav nav-stacked">
+                                    <li><a href="#mega_menus" class="page-scroll">Mega Menu</a></li>
+                                    <li><a href="#slider_menus" class="page-scroll">Slider Menu</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#enar_sliders" class="page-scroll">Sliders</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div> -->
+            
+            <!---------------------------------------------------------------- Main Content -->
+            <div class="col-md-12">
+                
+                <!----------------- Main Section ----------------->
+                <section id="installation" class="section_group">
+                  <h1 class="section_header">Installation</h1>
+                  
+                  <!----------------- Section ----------------->
+                  <div id="installation_ftp" class="subgroup">
+                    <h3>Uploading Enar via FTP</h3>
+                    <ul class="enar_list1">
+                        <li><span class="num">1</span>Log into your hosting space via an FTP software.</li>
+                        <li><span class="num">2</span>Unzip the Enar.zip file and ONLY use the extracted Enar theme folder.</li>
+                        <li><span class="num">3</span>Upload the extracted Enar theme folder into wp-content &gt; themes folder.</li>
+                        <li><span class="num">4</span>Activate the newly installed theme by going to Appearance &gt; Themes and clicking the Activate button.</li>
+                        <li><span class="num">5</span>Once you activate Enar, You will then see a notification message to install and activate the required &amp; recommended plugins: Revolution Slider, Visual Composer.</li>
+                        <li><span class="num">6</span>In the notification message, click the "Begin activating plugins" button to go to the "Install Plugins" tab where you can install and activate the required &amp; recommended plugins.</li>
+                        <li><span class="num">7</span>Simply click the Install button on each plugin to start installing them. After you've installed them, an Activate button will appear which you can click to start activating them.<br>
+                        </li>
+                        <li>
+                            <div class="thumbnail"><img src="img/plugin1.jpeg"></div>
+                        </li>
+                        <li>
+                            <div class="thumbnail"><img src="img/plugin2.jpeg"></div>
+                        </li>
+                    </ul>
+                  </div>
+                  
+                  <!----------------- Section ----------------->
+                  <div id="installation_dash" class="subgroup">
+                    <h3>Installing Enar Using WordPress Dashboard</h3>
+                    <ul class="enar_list1">
+                      <li><span class="num">1</span>Unzip the Enar.zip file and ONLY use the extracted Enar theme folder.</li>
+                      <li><span class="num">2</span>Log into your WordPress admin panel and click on the "Appearance" tab.</li>
+                      <li><span class="num">3</span>Now click on the "Add New Themes" tab.</li>
+                      <li><span class="num">4</span>Click on the "Upload" button, "Browse" for file called Enar.zip In the extracted folder select "Open".</li>
+                      <li><span class="num">5</span>Click the "Install Now" button.</li>
+                      <li><span class="num">6</span>Activate the theme from this page, OR "Return to Themes Page" and activate from there.</li>
+                    </ul>
+                    <div class="embed-container">
+                      <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/hhypHMECHTk?showinfo=0"></iframe>
+                    </div>
+                  </div>
+                    
+                </section>
+                
+                <!----------------- Main Section ----------------->
+                <section id="enar_updating" class="section_group">
+                  <h1 class="section_header">Updating Enar Theme</h1>
+                  <p class="enar_desc1">This theme may be updated periodically in order to add new features and fix bugs. When a new update be avilable an update message will appears on your blog dashboard . As a customer, you can download the most current version from your ThemeForest account. </p>
+                  <h3>Updating Automatically Using Envato Toolkit Plugin</h3>
+                  <p class="enar_desc1">
+                          Envato have developed the <a target="_blank" href="https://github.com/envato/envato-wordpress-toolkit">Envato Toolkit Plugin</a> for WordPress.
+                          You can use this to receive notification of updates to themes purchased from ThemeForest
+                          and to automatically update (upon clicking) directly from within your WordPress admin area.
+                  </p>
+                  <ul class="enar_list1">
+                          <li><span class="num">1</span>Download the <a href="https://github.com/envato/envato-wordpress-toolkit/zipball/master">plugin zip file</a> to your computer.</li>
+                          <li><span class="num">2</span>In your WordPress admin area, go to Plugins &gt; Add New then click Upload.</li>
+                          <li><span class="num">3</span>Click Choose File, select the plugin zip file you downloaded and click Install Now.</li>
+                          <li><span class="num">4</span>After installation, click Activate.</li>
+                          <li><span class="num">5</span>Click the new Envato Toolkit link in the menu and follow the instructions to configure the plugin.</li>
+                  </ul>
+                  
+                  <div id="enar_updating_manually">                     
+                    <h3>Updating Manually</h3>
+                    <ul class="enar_list1">
+                            <li><span class="num">1</span>Download the most current version from <a target="_blank" href="http://themeforest.net/">ThemeForest</a> in the "Downloads" area of your account.</li>
+                            <li><span class="num">2</span>Unzip the package and locate Enar.zip in the theme folder.</li>
+                            <li><span class="num">3</span>Go to Appearance &gt; Themes and activate another theme such as the default WordPress theme.</li>
+                            <li><span class="num">4</span>Delete the Enar theme which is now inactive.</li>
+                            <li><span class="num">5</span>Go to Install Themes &gt; Upload then install and activate Enar.zip from the new package.</li>
+                    </ul>
+                  </div>
+                  
+                </section>    
+                
+                <!----------------- Main Section ----------------->
+                <section id="installing_sample_content" class="section_group">
+                  <h1 class="section_header">Installing Sample Content</h1>
+                  <p class="enar_desc1">Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme. It will allow you to quickly edit everything instead of creating content from scratch.</p>
+                  <ul class="enar_list1">
+                    <li><span class="num">1</span>Go to <strong>Dashboard</strong> &gt; <strong>Tools</strong> &gt; <strong>Import</strong></li>
+                    <li><span class="num">2</span>Click <strong>WordPress</strong> link</li>
+                    <li><span class="num">3</span>Click on <strong>Browse</strong> and Navigate to folder called <strong>"Sample Content"</strong>, that exist inside theme pack</li>
+                    <li><span class="num">4</span>select the File Called <strong>enar.wordpress.xml</strong> and click <strong>open</strong></li>
+                    <li><span class="num">5</span>Click on <strong>Upload file and import</strong> Button</li>
+                    <li><span class="num">6</span>Select user that you want this imported content assign to him</li>
+                    <li><span class="num">7</span>Check <strong>Download and import file attachments </strong></li>
+                    <li><span class="num">8</span>Then Click on <strong>Submit</strong> button to start import simple data with its images like or demo.</li>
+                </ul>
+                </section>
+                
+                <!----------------- Main Section ----------------->
+                <section id="language_translations" class="section_group">
+                  <h1 class="section_header">Language Translations</h1>
+                  <p class="enar_desc1">All of our Themes are able to be translated into any language. The process of translating the theme is a user responsibility. The following instructions are given as guidance.</p>
+                  <ul class="enar_list1">
+                    <li><span class="num">1</span>Open <strong>wp-config.php</strong> file located directly in your root and replace this:
+                        <code>define ('WPLANG', '');  </code> with your own, for example: <code>define ('WPLANG', 'tr_TR');</code> </li>
+                    <li><span class="num">2</span>Download and install <a rel="nofollow" target="_blank" href="http://www.poedit.net/download.php">POEDIT</a></li>
+                    <li><span class="num">3</span>Connect to your site &gt;&gt; open your <strong>theme/lang</strong> directory</li>
+                    <li><span class="num">4</span>open the <strong>tr_TR.po</strong> file and edit it with <strong>POEDIT</strong>.</li>
+                    <li><span class="num">5</span>Translate file and save it as tr_TR ( the file name must match with the string you inserted into wp-config.php )</li>
+                    <li><span class="num">6</span>Two files will be generated, <strong>tr_TR.po</strong> and <strong>tr_TR.mo</strong></li>
+                    <li><span class="num">7</span>Upload the <strong>.mo</strong> and .po files into <strong>wp-content/themes/enar/lang</strong> folder</li>
+                </ul>
+              </section>
+                
+              <!----------------- Main Section ----------------->
+              <section id="theme_navigations" class="section_group">
+                <h1 class="section_header">Theme Menus</h1>
+                <p class="enar_desc1">This Theme uses wordpress built-in menus feature which can be found in your wordpress dashboard &gt; appearance &gt; menus. To setup a new menu, please follow the steps below.</p>
+                <ul class="enar_list1">
+                  <li><span class="num">1</span>Navigate to <strong>Apperance &gt; Menus</strong> page</li>
+                  <li><span class="num">2</span>Click the <strong>"create a new menu"</strong> link to make a new menu. Enter the name then hit <strong>Create Menu</strong>.</li>
+                  <li><span class="num">3</span>To add a menu item, you can select one of your pages on the left side and click <strong>Add to Menu</strong>.</li>
+                  <li><span class="num">4</span>You can also add menu items by entering a custom name and custom link into the <strong>Links</strong> box.</li>
+                  <li><span class="num">5</span>After setting up your menu, select the menu you just created as the <strong>Primary Menu 1</strong> in the Menu Settings and Create a new menu and select it as the  <strong>Top Menu Navigation</strong> in the Menu Settings</li>
+                  <li><span class="num">6</span>Once its all done, make sure you click the <strong>Save</strong> button.</li>
+                  <li><span class="num">7</span>You can chnage menus locations in any time from <strong>Manage Locations</strong> tab.</li>
+                </ul>
+                <div class="embed-container">
+                  <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/6tcgUDS6uQQ?showinfo=0"></iframe>
+                </div>
+                
+                <!----------------- Section ----------------->
+                <div id="mega_menus" class="subgroup">
+                  <h3>Mega Menu</h3>
+                  
+                  <ul class="enar_list1">
+                    <li><span class="num">1</span>Navigate to <strong>Apperance &gt; Menus</strong> page, and Select a menu to edit.</li>
+                    <li><span class="num">2</span>Go to the menu structure, and click the arrow on the right of the item to reveal additional configuration options.</li>
+                    <li><span class="num">3</span>Go to <strong>"Sub Menu Type"</strong> and select <strong>"Mega Menu"</strong>, also you should select the same option for all child items.</li>
+                    <li><span class="num">4</span>Once its all done, make sure you click the <strong>Save</strong> button.</li>
+                  </ul>
+                  <div class="thumbnail"><img src="img/mega_menu_demo.jpeg"></div>
+                  <div class="thumbnail"><img src="img/menu1.jpeg"></div>
+                </div>
+                
+                <!----------------- Section ----------------->
+                <div id="slider_menus" class="subgroup">
+                  <h3>Slider Menu</h3>
+                  
+                  <ul class="enar_list1">
+                    <li><span class="num">1</span>Navigate to <strong>Apperance &gt; Menus</strong> page, and Select a menu to edit.</li>
+                    <li><span class="num">2</span>Go to the menu structure, and click the arrow on the right of the item to reveal additional configuration options.</li>
+                    <li><span class="num">3</span>Go to <strong>"Sub Menu Type"</strong> and select <strong>"Slider Menu"</strong>, also you should select the same option for all child items.</li>
+                    <li><span class="num">4</span>Once its all done, make sure you click the <strong>Save</strong> button.</li>
+                  </ul>
+                  <div class="thumbnail"><img src="img/image_menu_demo.jpeg"></div>
+                  <div class="thumbnail"><img src="img/menu2.jpeg"></div>
+                </div>
+                
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="enar_sliders" class="section_group">
+                <h1 class="section_header">Sliders</h1>
+                
+                <ul class="enar_list1">
+                  <li><span class="num">1</span>Add new slider by navigation to Dashboard > Sliders > Add New.</li>
+                  <li><span class="num">2</span>Set the slider text title.</li>
+                  <li><span class="num">3</span>You can use the shortcode text inside pages and posts editor, to show your slider any where.</li>
+                  <li><span class="num">4</span>Choose the slider type ( Default Slider - PNG Slider - etc... )</li>
+                  <li><span class="num">5</span>Enter your slide image, title , link and caption.</li>
+                  <li><span class="num">6</span>Use "Add New Slide" button to add a new slide.</li>
+                  <li><span class="num">7</span>Set your slider options, Animation Type, Duration speed and etc...</li>
+                  <li><span class="num">8</span>Once its all done, make sure you click the Publish / Update button.</li>
+                </ul>
+                <div class="thumbnail"><img src="img/sliders.jpg"></div>
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="shortcodes" class="section_group">
+                <h1 class="section_header">Shortcodes</h1>
+                <p class="enar_desc1">Enar has about 40 shortcodes elements, these shortcodes helps explain the main elements. icons and tools we include will help you quickly build beautiful pages with our shortcode panel and visual composer page builder. Please read below for detailed information regarding each section.</p>
+                <ul class="enar_list1">
+                  <li><span class="num">1</span>Enable visual composer page builder by activate "Backend Editor" from the icon above the text editor.</li>
+                  <li><span class="num">2</span>Click on "Add Element", the visual composer builder elements panel will opened.</li>
+                  <li><span class="num">3</span>Go to "Enar" tab, there you will find all Enar shortcodes.</li>
+                </ul>
+                
+                <div class="thumbnail"><img src="img/shortcodes.jpeg"></div>
+                
+                <!-----[--1--]----->
+                <div id="shortcodes_section" class="subgroup">
+                  <h3>1 - Section</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Section" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/INqlGHstD4A?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--2--]----->
+                <div id="shortcodes_rows" class="subgroup">
+                  <h3>2 - Rows & Columns</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Rows & Columns" shortcodes.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/WpQ1aGOIWVE?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--3--]----->
+                <div id="shortcodes_video" class="subgroup">
+                  <h3>3 - Video</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Video" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/gFRHTNFNM7U?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--4--]----->
+                <div id="shortcodes_title" class="subgroup">
+                  <h3>4 - Title</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Title" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/4tMhIjTt77M?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--5--]----->
+                <div id="shortcodes_description" class="subgroup">
+                  <h3>5 - Description</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Description" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/dnKHozeum54?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--6--]----->
+                <div id="shortcodes_banner" class="subgroup">
+                  <h3>6 - Banner Text</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Banner Text" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/5wk34iDzr9U?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--7--]----->
+                <div id="shortcodes_accordion" class="subgroup">
+                  <h3>7 - Accordion</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Accordion" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/OcLkR3MiHPc?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--8--]----->
+                <div id="shortcodes_tabs" class="subgroup">
+                  <h3>8 - Tabs</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Tabs" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/5Z_xcYCJJYc?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--9--]----->
+                <div id="shortcodes_clients" class="subgroup">
+                  <h3>9 - Clients</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Clients" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/ZwSjTL7D7Sg?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--10--]----->
+                <div id="shortcodes_counters" class="subgroup">
+                  <h3>10 - Counters</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Counters" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/xM9iSkhC3N8?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--11--]----->
+                <div id="shortcodes_light_box" class="subgroup">
+                  <h3>11 - Light Box</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Light Box" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/P65WwRzkJuY?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--12--]----->
+                <div id="shortcodes_skills" class="subgroup">
+                  <h3>12 - Skills</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Skills" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/kOBcemutbOM?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--13--]----->
+                <div id="shortcodes_team" class="subgroup">
+                  <h3>13 - Team</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Team" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/gKhZKDyduQc?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <!-----[--14--]----->
+                <div id="shortcodes_testimonials" class="subgroup">
+                  <h3>14 - Testimonials</h3>
+                  <p class="enar_desc2">The following video will show you how to add "Testimonials" shortcode.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/0vmZsobrpLg?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="options_post_meta" class="section_group">
+                <h1 class="section_header">Page Options</h1>
+                <p>Enar is extremely powerful and a lot of that power comes from our individual page meta options. Each page you create has a full set of options to choose from allowing you to customize each individual page. Each page you open in your WordPress admin will have a Page Options that contains all the different settings. There are several different sections included in the Page Options box, each with its own title and purpose. Some settings will only work if you use a specific template, for example the "For Masonry Colored Template" are only to be used if you select one of our portfolio page templates ( Portfolio Masonry Template ). <!-- Enar Page Options are powerful, and the best way to get familiar with them is to check them out while editing a page. Below are screenshots and short descriptions of each different section included in the Page Options.--> </p>
+                <br/>
+                <!----------------- Section ----------------->
+                <div id="" class="subgroup">
+                  <h3>Post & Pages Options</h3>
+                  <p class="enar_desc1">Each page you open in your WordPress admin will have the following Page Options that contains all the different settings.</p>
+                  <div class="thumbnail"><img src="img/meta_box.jpeg"></div>
+                  <p class="enar_desc2">The following video will show you how to add use Enar page meta options.</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/lapIZs2UJAc?showinfo=0"></iframe>
+                  </div>
+                </div>
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="options_theme" class="section_group">
+                <h1 class="section_header">Theme Options</h1>
+                <p>Enar has an advanced Theme Options panel that is loaded with options. We have the options organized into logical tabbed sections, and each option has a description of what it will do on the front end. We encourage you to please take some time and navigate through each tab to see what we offer. Go to "Dashboard > Enar Options" in your WordPress admin to access the Enar Theme Options panel. You can also backup your theme options by clicking on the "Import / Export" tab. That is a great way to move your custom options from site to site.</p>
+                <br/>
+                <p class="enar_desc2">The following video will show you how to add use Enar theme options.</p>
+                <div class="embed-container">
+                  <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/5quy4d55su8?showinfo=0"></iframe>
+                </div>
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="pages" class="section_group">
+                <h1 class="section_header">Pages</h1>
+                <p>Pages are the backbone of your website, and most likely you will setup several of them. Pages are a blank canvas that allow you to add content with our shortcode elements. There are different page templates to choose from, each serving a purpose to help you build a finished site.</p>
+                <br/>
+                
+                <div id="pages_contact" class="subgroup">
+                  <h3>Setting Up The Contact Page</h3>
+                  <p class="enar_desc2">The following video will show you how to "Setting Up The Contact Page".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/dI8U8Nn9XyA?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <div id="pages_faq" class="subgroup">
+                  <h3>Setting Up The FAQ Page</h3>
+                  <p class="enar_desc2">The following video will show you how to "Setting Up The FAQ Page".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/_D4iZs5Ynpc?showinfo=0"></iframe>
+                  </div>
+                </div>
+              </section>
+              
+              <!----------------- Main Section ----------------->
+              <section id="blog_posts" class="section_group">
+                <h1 class="section_header">Blog Posts</h1>
+                <p>No matter which method or methods you use to display your blog posts, the first thing you need to do is create the blog posts. Enar offers several blog post types, image, gallery, video, audio, quote, link and more on the way. And with the ability to assign custom categories to each post, you can easily display a set of posts based on category. See below for information on how to create blog posts.</p>
+                <br/>
+                
+                <div id="blog_new_post" class="subgroup">
+                  <h3>Add New Blog Post</h3>
+                  <p class="enar_desc2">The following video will show you how to "Add New Blog Post".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/11OP5JpqxZ4?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <div id="blog_widget" class="subgroup">
+                  <h3>Blog Post Sidebar Widgets</h3>
+                  <p class="enar_desc2">The following video will show you how to "Blog Post Sidebar Widgets".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/gvSxn5Em0lI?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <div id="blog_post_features" class="subgroup">
+                  <h3>Blog Post Features</h3>
+                  <p class="enar_desc2">The following video will show you how to "Blog Post Features".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/kl95kfnuq4g?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+                <div id="blog_post_author" class="subgroup">
+                  <h3>Blog Post About Author Box</h3>
+                  <p class="enar_desc2">The following video will show you how to "Blog Post About Author Box".</p>
+                  <div class="embed-container">
+                    <iframe width="100%" frameborder="0" allowfullscreen="" src="https://www.youtube.com/embed/7_K7NWKKyjM?showinfo=0"></iframe>
+                  </div>
+                </div>
+                
+              </section>
+              
+            </div>
+            <!---------------------------------------------------------------- End / Main Content -->
+        </div>
+        
+    </div>
+    <!---------------------------->
+    <div class="enar_footer">
+      
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/functions.js"></script>
+</body>
+</html>

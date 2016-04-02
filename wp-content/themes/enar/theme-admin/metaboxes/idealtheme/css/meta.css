@@ -1,0 +1,51 @@
+.my_meta_control .description
+{ }
+ .color_desc{
+	 color:#EA4D24;
+ }
+.my_meta_control label
+{ display:block; font-weight:bold; margin:6px; margin-bottom:0; margin-top:12px; color: #202e37; }
+ 
+.my_meta_control label span
+{ display:inline; font-weight:normal; }
+ 
+.my_meta_control textarea, .my_meta_control input[type='text']
+{ color: #555;
+    font-size: 13px;
+    margin-bottom: 3px;
+    padding: 7px;
+    width: 73%;}
+ 
+.my_meta_control h4
+{ color:#999; font-size:1em; margin:15px 6px; text-transform:uppercase; }
+.social_media_raw{
+	margin-bottom: 10px;
+}
+.social_media_raw .social_icon{
+	color: #00afb2;
+    display: block;
+    float: left;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    width: 18px;
+}
+.social_media_raw input{
+	border: 1px solid #ddd;
+    float: left;
+    margin-left: 10px;
+    min-height: 28px;
+    width: 300px !important;
+}
+.social_media_raw .name{
+	min-width: 95px;
+	line-height: 30px;
+	float: left;
+	color: #202e37;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 8px;
+}
+.clear{
+   clear: both;	
+}

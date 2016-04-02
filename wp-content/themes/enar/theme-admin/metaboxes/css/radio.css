@@ -1,0 +1,53 @@
+/*radio*/
+.radioo{
+	display: block;
+    float: left;
+    height: 22px;
+    margin-bottom: 5px;
+    position: relative;
+    width: 22px;
+	margin-right: 10px;
+}
+.radio_style:last-of-type .radioo {
+    margin-bottom: 0;
+}
+.radio_style input {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100000;
+}
+.radio_style label {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-ms-border-radius: 2px;
+    display: block;
+}
+.radio_style label, .radio_style label i{
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.radio_style label i {
+	font-size: 17px;
+    color: #bbbbbb;
+	line-height: 22px;
+}
+.radio_style input:checked ~ label {
+    border-color: #44d50f;
+	background:#44d50f;
+	
+}
+.radio_style input:checked ~ label i {
+    color: #fff;
+}
+

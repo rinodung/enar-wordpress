@@ -1,0 +1,12 @@
+/* =Styles for 'heading' field
+-------------------------------------------------------------- */
+
+.rwmb-heading-wrapper h4 {
+	display: block;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 20px;
+    margin: 0;
+    padding: 9px 0;
+}
